@@ -25,10 +25,6 @@ export const putJoke = (jokeObject) => {
 export const deleteJoke = (jokeObject) => {
     const deleteOptions = {
         method: "DELETE",
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify(jokeObject),
     }
 
     return fetch(`http://localhost:8088/jokes/${jokeObject.id}`, deleteOptions)
